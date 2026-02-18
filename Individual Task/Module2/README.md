@@ -100,7 +100,7 @@ To ensure ethical handling of data, the following practices are recommended:
 - Disclose all partners with access to user data.  
 - Perform regular audits and compliance checks to ensure partners adhere to privacy standards and ethical guidelines.
 
-## Diagram: Privacy polivy Analysis 
+## Diagram: Privacy policy Analysis 
 ![WhatsApp Image 2026-02-18 at 2 22 59 PM](https://github.com/user-attachments/assets/3f7713fb-ac69-4e3e-8c7c-8b68d9f07c56)
 
 ## 4. Conclusion
