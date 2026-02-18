@@ -1,4 +1,6 @@
-# 1. Analyzing a Privacy Policy: WhatsApp 
+# Analyzing a Privacy Policy: WhatsApp 
+
+## 1. Introduction
 
 This analysis explores how WhatsApp’s privacy policy governs user data, what ethical questions it raises, and how its practices align with data governance principles. WhatsApp, with over 2 billion users globally, collects, stores, and sometimes shares a variety of data types, making its privacy policy critical for understanding ethical and legal implications.
 
