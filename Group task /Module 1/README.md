@@ -319,7 +319,7 @@ Their contributions are complementary and collectively indispensable.
 
 ---
 
-# 1. Conclusion
+# 13. Conclusion
 
 Alan Turing’s contributions represent the intellectual genesis of Artificial Intelligence. By mathematically defining computation, establishing algorithmic limits, proposing behavioral evaluation criteria, and anticipating adaptive learning systems, he constructed the conceptual superstructure upon which AI is built.
 
