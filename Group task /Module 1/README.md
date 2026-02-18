@@ -1,5 +1,5 @@
-Analysis of Alan Turing’s Contribution to Artificial Intelligence
-1. Introduction
+# Analysis of Alan Turing’s Contribution to Artificial Intelligence
+## 1. Introduction
 Alan Turing is universally acknowledged as one of the principal architects of theoretical computer science and artificial intelligence. His intellectual contributions transcended mathematics and extended into logic, philosophy of mind, cryptography, and early computational engineering. Turing did not merely propose isolated ideas; he constructed a rigorous formal framework that defined what computation is, what machines can theoretically achieve, and where their limitations lie.
 Artificial Intelligence (AI), as a discipline concerned with replicating or simulating intelligent behavior through computational systems, is fundamentally rooted in Turing’s formalization of algorithmic processes. By establishing a mathematical theory of computation, defining undecidability, and reframing the philosophical question of machine intelligence into an operational test, Turing laid the epistemic and structural foundation upon which contemporary AI systems — including deep learning models — continue to operate.
 
