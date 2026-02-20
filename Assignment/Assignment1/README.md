@@ -1,162 +1,168 @@
-## 1. Variance and Bias (Diagram, overfit, underfit) - For best fit model should we have low bias or high variance, low bias or low variance, 
+## Variance and Bias (Diagram, overfit, underfit) - For best fit model should we have low bias or high variance, low bias or low variance, 
 high bias or high variance, low bias or high variance
 
-## 1.1 Introduction
+## 1. Introduction
 
-In Machine Learning, when we build a model, our main goal is to make accurate predictions on new, unseen data. However, models often make two types of errors:
+In Machine Learning, the primary objective of a model is to identify meaningful patterns from training data and make accurate predictions on unseen data.
 
-- Bias Error  
-- Variance Error  
+However, prediction errors generally arise due to two fundamental sources:
 
-Understanding bias and variance helps us identify whether a model is overfitting or underfitting, and how to improve it.
+- Bias  
+- Variance  
+
+A clear understanding of these concepts is essential to avoid:
+
+- Underfitting  
+- Overfitting  
+
+An effective machine learning model must achieve an appropriate balance between bias and variance to ensure good generalization.
 
 ---
 
-## 1.2 What is Bias?
+## 2. Machine Learning Model Training
 
-### Definition
+Model training is the process through which a machine learning algorithm learns relationships between input features and the target output by minimizing prediction error.
 
-Bias is the error caused by overly simple assumptions in the learning algorithm.
+### Steps in Model Training:
 
-It measures how far the model’s predictions are from the actual values on average.
+1. A training dataset consisting of input variables and corresponding target values is provided.  
+2. The model generates predictions based on current parameters.  
+3. The difference between predicted and actual values is measured using a loss function.  
+4. Model parameters (weights) are updated to reduce the error.  
+5. The process is repeated iteratively until the model converges to minimum error.  
 
-### Characteristics of High Bias
+A properly trained model should perform well not only on training data but also on unseen test data.
 
-- Model is too simple  
-- Cannot capture complex patterns  
+---
+
+## 3. Bias in Machine Learning
+
+Bias refers to the error introduced due to overly simplified assumptions in the learning algorithm.
+
+When a model is too simple, it fails to capture the underlying structure of the data.
+
+### Characteristics of High Bias:
+
+- Model is overly simplistic  
+- Fails to capture complex relationships  
 - High training error  
 - High testing error  
-- Leads to Underfitting  
+- Poor predictive performance  
 
-### Example
-
-If we use a straight line (linear model) to fit curved data, the model cannot capture the curve properly. This is high bias.
+High bias results in **Underfitting**.
 
 ---
 
-## 1.3 What is Variance?
+## 4. Variance in Machine Learning
 
-### Definition
+Variance refers to the model’s sensitivity to small fluctuations in the training dataset.
 
-Variance is the error caused due to too much sensitivity to small changes in training data.
+When a model is excessively complex, it learns not only the actual patterns but also the noise present in the data.
 
-It measures how much the model prediction changes when we use different training datasets.
+### Characteristics of High Variance:
 
-### Characteristics of High Variance
+- Model is highly complex  
+- Extremely low training error  
+- High testing error  
+- Poor generalization  
+- Sensitive to changes in dataset  
 
-- Model is too complex  
-- Fits noise in data  
+High variance leads to **Overfitting**.
+
+---
+
+## 5. Underfitting (High Bias, Low Variance)
+
+<img width="500" height="1000" alt="ChatGPT Image Feb 20, 2026, 06_40_04 PM" src="https://github.com/user-attachments/assets/baba3838-cbbd-4082-93cb-0a87220c374b" />
+
+Underfitting occurs when a model is too simple to represent the true relationship between input and output variables.
+
+### Explanation:
+
+- Model structure is overly simple (e.g., linear model for nonlinear data)  
+- Fails to capture important patterns  
+- High training error  
+- High testing error  
+- Poor overall performance  
+
+The model lacks sufficient complexity to learn effectively.
+
+---
+
+## 6. Overfitting (Low Bias, High Variance)
+
+<img width="500" height="1000" alt="ChatGPT Image Feb 20, 2026, 06_41_08 PM" src="https://github.com/user-attachments/assets/7415cc30-5bc1-4828-9e7b-c58a165d2ea1" />
+
+Overfitting occurs when a model learns both the true pattern and the random noise present in the training data.
+
+### Explanation:
+
+- Model is excessively complex  
+- Fits every training data point  
 - Very low training error  
 - High testing error  
-- Leads to Overfitting  
+- Performs poorly on unseen data  
 
-### Example
-
-If we use a very high-degree polynomial that passes through every data point, it fits training data perfectly but performs poorly on new data.
+The model memorizes the training data instead of generalizing.
 
 ---
 
-## 1.4 Bias–Variance Diagram (Conceptual Representation)
+## 7. High Bias and High Variance (Worst-Case Scenario)
 
-<img width="1536" height="1024" alt="ChatGPT Image Feb 20, 2026, 06_21_47 PM" src="https://github.com/user-attachments/assets/14182c65-665c-44cf-868a-865ca5134dc5" />
+This condition occurs when the model suffers from both excessive simplification and instability across datasets.
 
-### Explanation
+### Explanation:
 
-- Left side → Model too simple → High Bias → Underfitting  
-- Right side → Model too complex → High Variance → Overfitting  
-- Middle → Balanced model → Best performance  
+- Model fails to capture the true underlying relationship  
+- Predictions vary significantly across different training samples  
+- High training error  
+- High testing error  
+- Model is unreliable and unstable  
 
----
-
-## 1.5 Underfitting
-
-### Definition
-
-Underfitting occurs when the model is too simple to capture the pattern of the data.
-
-### Causes
-
-- Very simple model  
-- Too few features  
-- Less training time  
-
-### Characteristics
-
-- High Bias  
-- Low Variance  
-- Poor performance on both training and test data  
+Although uncommon, this scenario results in extremely poor model performance.
 
 ---
 
-## 1.6 Overfitting
+## 8. Best Fit Model (Low Bias, Low Variance)
 
-### Definition
+The ideal model captures the true data pattern without learning noise.
 
-Overfitting occurs when the model learns both pattern and noise in the training data.
+### Explanation:
 
-### Causes
+- Model is appropriately complex  
+- Low training error  
+- Low testing error  
+- Stable performance across datasets  
+- Strong generalization capability  
 
-- Very complex model  
-- Too many parameters  
-- Small dataset  
-
-### Characteristics
-
-- Low Bias  
-- High Variance  
-- Excellent training accuracy  
-- Poor test accuracy  
+This represents the optimal balance between bias and variance.
 
 ---
 
-## 1.7 Bias–Variance Tradeoff
+## 9. Bias–Variance Tradeoff
 
-There is always a tradeoff between bias and variance:
+The total prediction error of a model can be decomposed into:
 
-- If bias decreases → variance increases  
-- If variance decreases → bias increases  
+**Total Error = Bias² + Variance + Irreducible Error**
 
-The goal is to find a balance between them.
+As model complexity increases:
 
-This balance is called the **Optimal Model** or **Best Fit Model**.
+- Bias decreases  
+- Variance increases  
 
----
+As model complexity decreases:
 
-## 1.8 Optimal Model Selection
+- Bias increases  
+- Variance decreases  
 
-- Low Bias or High Variance → Overfitting  
-- High Bias or High Variance → Worst case  
-- High Bias or Low Variance → Underfitting  
-- Low Bias and Low Variance → Correct Answer  
-
-### Final Answer:
-
-For the best fit model, we should have:
-
- **Low Bias and Low Variance**
-
-Because:
-
-- Low bias → Model captures true pattern  
-- Low variance → Model generalizes well to new data  
+The optimal model lies at the point where total error is minimized.
 
 ---
 
-## 1.9 Conclusion
+## 10. Conclusion
 
-Bias and variance are two main sources of error in machine learning models.
+For a model to achieve optimal performance, it must maintain low bias and low variance. Low bias ensures that the model accurately captures the true underlying relationship in the data, while low variance ensures that the model performs consistently across different datasets.
 
-**Bias** occurs when a model is too simple and fails to capture the true pattern of the data, leading to **underfitting** and poor performance on both training and test data.
+A model with low bias but high variance may perform well on training data but fail on new data. Conversely, a model with high bias and low variance may consistently perform poorly due to oversimplification.
 
-**Variance** occurs when a model is too complex and learns noise from the training data, leading to **overfitting** and poor performance on unseen data.
-
-This relationship is called the **bias–variance tradeoff**:
-
-- Increasing model complexity → Bias decreases, Variance increases  
-- Decreasing model complexity → Bias increases, Variance decreases  
-
-The best-fit model has **low bias and low variance**, meaning it captures real patterns while generalizing well to new data.
-
-Techniques like cross-validation, regularization (L1/L2), increasing training data, and proper model selection help maintain this balance.
-
-Balancing bias and variance is essential for building accurate and reliable machine learning models.
+Therefore, achieving the correct balance between bias and variance is fundamental to building robust and reliable machine learning systems. Proper model selection, regularization, cross-validation, and hyperparameter tuning are essential techniques used to manage this tradeoff effectively.
