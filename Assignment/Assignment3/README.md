@@ -93,8 +93,11 @@ If plotted on a graph:
 As σ increases, the curve becomes flatter and more spread out.
 
 ---
+## 6. Graphical Representation
 
-## 6. Which is Better? 
+<img width="500" height="1000" alt="ChatGPT Image Feb 20, 2026, 07_16_33 PM" src="https://github.com/user-attachments/assets/c6631154-b5cc-42b8-8199-1d4bbdcb4e4d" />
+
+## 7. Which is Better? 
 
 The better distribution depends on the objective.
 
@@ -113,7 +116,7 @@ Therefore,
 
 ---
 
-## 7. Conclusion 
+## 8. Conclusion 
 
 Although all three distributions share the same mean (55), their variability differs significantly. A smaller standard deviation indicates that the data values are closely clustered around the mean, leading to better predictability and consistency.
 
